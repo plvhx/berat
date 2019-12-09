@@ -1,0 +1,19 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+<form method="POST" action="/update/{{ data_list['index'] }}">
+  <div class="form-group">
+    <label for="tanggal">Tanggal</label>
+    <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ data_list['tanggal'] }}" />
+  </div>
+  <div class="form-group">
+    <label for="berat-max">Berat Maksimal</label>
+    <input type="text" class="form-control" id="berat-max" name="berat-max" value="{{ data_list['berat-max'] }}" />
+  </div>
+  <div class="form-group">
+    <label for="berat-min">Berat Minimal</label>
+    <input type="text" class="form-control" id="berat-min" name="berat-min" value="{{ data_list['berat-min'] }}" />
+  </div>
+  <input type="submit" name="simpan" value="Simpan" class="btn btn-primary" />
+</form>
+{% endblock %}

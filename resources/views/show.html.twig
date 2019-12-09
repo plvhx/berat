@@ -1,0 +1,24 @@
+{% extends 'index.html.twig' %}
+
+{% block content %}
+<table class="table">
+	<tbody>
+		<tr>
+			<td>Tanggal</td>
+			<td>{{ data_list['tanggal'] }}</td>
+		</tr>
+		<tr>
+			<td>Max</td>
+			<td>{{ data_list['berat-max'] }}</td>
+		</tr>
+		<tr>
+			<td>Min</td>
+			<td>{{ data_list['berat-min'] }}</td>
+		</tr>
+		<tr>
+			<td>Perbedaan</td>
+			<td>{{ data_list['berat-max'] - data_list['berat-min'] }}</td>
+		</tr>
+	</tbody>
+</table>
+{% endblock %}
